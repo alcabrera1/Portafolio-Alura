@@ -1,0 +1,529 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+img{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h3 {
+    margin: 0%;
+}
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+p{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+ol, ul,li {
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+a:hover{
+    color: #b2c2bf;
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+section.menu, .menu__header{
+    display: flex;
+    align-items: center;/*Centrar icono y texto para q esten a la misma posicion*/
+}
+section.menu{
+    justify-content: space-between;
+    padding: 0.5% 10% ;
+}
+.menu__header{
+    gap: 15px;/*Espacio entre icono y texto*/
+
+}
+.menu__list{
+    display: none;
+    
+}
+
+nav {
+    display: block;
+  }
+
+
+/*Sección Title*/
+
+section.title{
+    display: flex;
+    background-color: #f0f0f0; 
+    padding: 0% 10%;
+}
+.title__div{
+    display: flex;
+    flex-direction: row-reverse;/*Invertor el orden*/
+    align-items: center;
+    justify-content: space-between;
+    gap:  20px; /*Separacion entre elementos*/
+}
+.title__container{
+    display: flex;
+    flex-direction: column;/*Colocar icono y texto uno a lado del otro*/  
+    padding: 4% 0%;
+}
+
+.title__profile{
+    width: 300px;
+}
+.title__bio{
+    font-size: 40px;
+    font-weight: bold;
+}
+.title__subsection{
+    font-size: 28px;
+    font-weight: lighter;
+}
+.title__network{
+    display: flex;
+    padding: 0%;
+    gap: 30px;
+}
+/*Sección About*/
+
+section.about{
+    background-color: #cfe5f1;
+    padding: 4% 10%;
+}
+.about__container{
+    display: flex;
+    flex-direction: column;
+    gap:  20px;
+    width: 70%;
+}
+.about__container img{
+    width: 150px;
+}
+/*Sección Skills*/
+section.skills{
+    background-color: #f0f0f0; 
+    padding: 4% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills__line{
+    padding-top: 2%;
+    display: flex;/*Se ubican uno al lado del otro en linea*/
+    flex-wrap: wrap;/*Se distribuyen por todo el contenedor*/
+    gap: 34px;
+}
+.skills__box{
+    position: relative;
+    background-color: white;
+    height: 172px;
+    width: 172px;
+    flex-grow: 1;/*Los elementos se distribuyen de forma proporcional, aumenta el tamaño de cda video aprovechando todo el espacio del contenedor*/
+}
+.skills__box ul{
+    position: absolute;
+    bottom: 2%;
+    padding-left: 10%;
+}
+/*Sección Hobbies*/
+
+section.hobbies{
+    padding: 0% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.hobbies{
+    background-color: #f0f0f0; 
+}
+.hobbies__line{
+    padding-top: 2%;
+    display: flex;/*Videos se ubican uno al lado del otro en linea*/
+    flex-wrap: wrap;/*Se distribuyen por todo el contenedor*/
+    gap: 34px;
+    padding-bottom: 4%;
+}
+.hobbies__box{
+    position: relative;
+    background-color: white;
+    height: 172px;
+    width: 172px;
+    flex-grow: 1;/*Los elementos se distribuyen de forma proporcional, aumenta el tamaño de cda video aprovechando todo el espacio del contenedor*/
+}
+.hobbies__box ul{
+    position: absolute;
+    bottom: 2%;
+    padding-left: 10%;
+}
+
+/* Experiencia Académica*/
+
+section.academic{
+    background-color: #cfe5f1;
+    padding: 4% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.academic__courses{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.academic__courses__box{
+    width: 32%;
+}
+.academic__courses__item__img {
+    background-color: #ffffff;
+    padding: 1%;
+}
+.academic__courses__item__img 
+img{
+    margin: 25%;
+    width: 50%;
+} 
+.academic__courses__item__title h4{
+    margin-top: 2%;
+    margin-bottom: 1%;
+
+}
+/* experiencia*/
+
+section.experience{
+    background-color: #f0f0f0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4% 10%;
+}
+.experiencie__box{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    padding: 2% 0%; 
+}
+.experiencie__box:nth-child(3),
+.experiencie__box:nth-child(5){
+    flex-direction: row-reverse;/*Invertor el orden*/
+}
+.experience__img{
+    width:  55%;
+}
+.experience__info{
+    padding: 10% 1%;
+    width: 40%;
+}
+.experience__section__title h4{
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.experience__botao--demo, .experiencia__botao--repo{
+    padding: 1%;
+}
+.experience__botao--demo{
+    color: white;
+    background-color: #2a7ae4;
+    border-color: #2a7ae4;
+}
+.experiencia__botao--repo{
+    color: #2a7ae4;
+}
+
+button:hover{
+    background-color: rgb(127, 163, 255);
+    color: #000;
+}
+/*Contacto*/
+
+section.formcontato{
+    background-color: #cfe5f1;
+    padding: 4% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formcontato__text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formcontato__contacto{
+    display: flex;
+    gap: 3%;
+    align-items: flex-start;
+}
+
+fieldset{
+    border: 0;
+    margin: 0;
+    padding: 4% 4% 0% 0%;
+}
+.formulario__campo{
+    display: inline-block;
+}
+
+.formcontato__input{
+    width: 100%;
+    border: none;
+}
+
+.formcontato__textarea{
+    font-family:Arial,FontAwesome;
+    width: 98%;
+    border: none;
+    resize: none;
+    padding: 4% 4% 0% 2%;
+}
+.formcontato__input:hover, .formcontato__textarea:hover{
+    border-bottom: 5px solid  rgb(127, 163, 255);
+}
+.formcontato__text h3{
+    font-size: 1rem;
+}
+.formcontato__form{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+} 
+.formcontato__input{
+    padding: 2%;
+}
+
+.formcontato__botao{
+    margin-top: 5%;
+    border: none;
+    background-color: #1d79f1;
+    color: white;
+    width: 25%;
+    padding: 2%;
+}
+.mensaje-error {
+    display: block;
+    margin-top: 5px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .925rem;
+    color: red;
+}
+
+/*footeer*/
+section.footer{
+    padding: 4% 10%;
+}
+
+.footer__rodape{
+    display: flex;/*se unieron los textos a los iconos del menu*/
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button[disabled=disabled], button:disabled {
+    opacity: 0.3;
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 834px) {
+    
+    
+/* Menú */
+.menu__list{
+    display: flex;
+    gap: 25px;/*Espacio entre icono y texto*/
+}
+.menu__list__item:nth-child(6){
+    font-weight: bold; /*Nuestro item Contacto en negrita*/
+}
+.menu__list__item__contato{
+    display: none;
+}
+
+/*title*/
+.title__network{
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    gap: 15px;
+   
+}
+
+.formcontato__botao {
+    width: 50%;
+}
+}
+@media (max-width: 768px){
+    
+    /*Titulo*/
+    .title__container{
+        display: flex;
+    }
+    .title__bio{
+        font-size: 30px;
+    }
+    .title__subsection{
+        font-size: 20px;
+    }
+    .title__profile{
+        width: 150px;
+    }
+    .title__network{
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 12px;
+        gap: 5px;
+       
+    }
+    .about__container{
+        width: 100%;
+    }
+    .skills__line{
+        justify-content: center;
+    }
+    .hobbies__line{
+        justify-content: center;
+    }
+
+    .experiencie__box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5%;
+        padding: 0% 2%;
+    }
+    
+    .experience__img{
+        width:  100%;
+    }
+    .experience__info{
+        width: 100%;
+    }
+    /* .experiencie__box:nth-child(3),
+.experiencie__box:nth-child(5){
+    flex-direction: column;
+} */
+.formcontato--esquerda{
+    display: none;
+}
+.formcontato__botao {
+    width: 50%;
+}
+}
+
+/*Mobile*/
+@media (max-width: 490px) {
+
+   
+    /*Menu*/
+    
+    /*Titulo*/
+    .title__div{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .title__profile{
+        width: 100px;
+        padding-top: 4%;
+    }
+    .title__network{
+        width: 80%;
+        font-size: 9px;
+        gap: 10px;
+    }
+    .menu__title{
+        font-size: 14px;
+    }
+    .menu__list__item__contato{
+        font-size: 12px;
+    }
+    /*Sección sobre mi*/
+    
+    /*Skills*/
+    .skills__line{
+        gap: 20px;
+    }
+    .skills__box{
+        height: 100px;
+        width: 100px;
+        flex-grow: 1;/*Los elementos se distribuyen de forma proporcional, aumenta el tamaño de cda video aprovechando todo el espacio del contenedor*/
+    }
+    /*Hobbies*/
+    .hobbies__line{
+        gap: 20px;
+    }
+    .hobbies__box{
+        height: 100px;
+        width: 100px;
+        flex-grow: 1;/*Los elementos se distribuyen de forma proporcional, aumenta el tamaño de cda video aprovechando todo el espacio del contenedor*/
+    }
+    /*Formación Académica*/
+    .academic__courses{
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        
+    }
+    .academic__courses__box{
+        width: 100%;
+        padding:  2% 8%;
+    }
+    .academic__courses__item__img {
+        text-align: center;
+        width: 80%;
+        
+    }
+    .academic__courses__item__img img{
+        margin: 5%;
+    }
+    /*Experiencia Profesional*/
+    
+     /*Contacto*/
+     .formcontato__botao {
+        width: 50%;
+    }
+    /*Footer*/
+    
+    }
+    
